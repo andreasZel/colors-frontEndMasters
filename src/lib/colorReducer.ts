@@ -14,7 +14,7 @@ type UpdateRGBColorAction = {
     };
 };
 
-type ColorState = {
+export type ColorState = {
     hexColor: string;
 }
 
