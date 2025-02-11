@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import { MouseEventHandler, useContext } from 'react';
+import { MouseEventHandler } from 'react';
 import Button from './button';
-import { ColorContext } from '../../lib/colorContext';
+import { useContext } from '../../lib/colorContext';
 
 type ColorChangeSwatchProps = {
   hexColor: string;
@@ -13,7 +13,7 @@ const ColorChangeSwatch = ({
   hexColor,
   className
 }: ColorChangeSwatchProps) => {
-  const { dispatch } = useContext(ColorContext);
+  const { dispatch } = useContext();
 
   function pickColor(hexColor: string) {
     dispatch({ type: 'update-hex-color', payload: { hexColor: hexColor } })
